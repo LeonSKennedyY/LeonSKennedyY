@@ -1,0 +1,24 @@
+#include <iostream>
+#include <locale.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale (LC_ALL, "Portuguese");
+
+    int digito=0, a=0, b=1, c=0;
+
+    cout<<"Qual numero da sequencia Fibonacci deseja mostrar? ";
+    cin>>digito;
+
+    for (int n = 0; n < digito; n++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    cout<<endl<<"Sequencia Fibonacci será: "<<a;
+
+    return 0;
+}
